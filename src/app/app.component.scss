@@ -4,3 +4,46 @@
   overflow: auto;
   background: red;
 }
+
+.products--grid{
+   display: flex;
+   flex-direction: column;
+   div {
+      img{
+         width: 100%;
+         border-radius: 10px;
+      }
+      h2 , p{
+         margin: 0;
+      }
+   }
+}
+.message-error{
+   border: 1px solid red;
+   border-radius: 3px;
+   padding: 3px;
+   color: red;
+   opacity: 0;
+   transition: all linear .2s;
+   &.invalid {
+      opacity: 1;
+   }
+}
+.styles{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+}
+@media screen and (max-width:40em) {
+   .products--grid{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      column-gap: 10px;
+   }
+}
+@media screen and (min-width:40em) {
+   .products--grid{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      column-gap: 15px;
+   }
+}
