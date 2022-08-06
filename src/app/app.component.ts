@@ -11,12 +11,16 @@ export class AppComponent {
    age = 22;
    img = 'https://i.imgur.com/Ipv33Vy.jpeg';
    btnDisable = true;
-
+   register = {
+      name:'',
+      email:'',
+      password:''
+   };
    person = {
       name: 'Daniel',
       age: 22,
       img: 'https://i.imgur.com/Ipv33Vy.jpeg',
-   }
+   };
 
    names: string[] = ['Daniel', 'Cristiano', 'Leones'];
    newName = '';
@@ -83,5 +87,8 @@ export class AppComponent {
    }
    deleteName(index: number) {
       this.names.splice(index, 1);
+   }
+   onRegister(){
+      console.log(this.register);
    }
 }
