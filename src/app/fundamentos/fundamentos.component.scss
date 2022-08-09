@@ -1,0 +1,95 @@
+.box {
+   height: 200px;
+   width: 200px;
+   overflow: auto;
+   background: red;
+ }
+
+ .products--grid{
+    display: flex;
+    flex-direction: column;
+    div {
+       img{
+          width: 100%;
+          border-radius: 10px;
+       }
+       h2 , p{
+          margin: 0;
+       }
+    }
+ }
+ .message-error{
+    border: 1px solid red;
+    border-radius: 3px;
+    padding: 3px;
+    color: red;
+    opacity: 0;
+    transition: all linear .2s;
+    &.invalid {
+       opacity: 1;
+    }
+ }
+ .line-error{
+    height: 0;
+    border-bottom: 1px solid;
+    &.invalid{
+       border-color: red;
+    }
+    &.valid{
+       border-color:green;
+    }
+ }
+ .input-group {
+    margin: 0 auto;
+    max-width: 400px;
+ }
+ .input-group p {
+    margin-top: 0;
+ }
+ .input-group > label, input,button {
+    display: block;
+    width: 100%;
+ }
+ .input-group > input{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 2rem;
+ }
+ .input-group > button{
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+ }
+ .input-group > button:hover{
+    cursor: pointer;
+    background-color: rgba($color: #000000, $alpha: .9);
+ }
+ .message-error-form{
+    border-radius: 3px;
+    padding: 3px;
+    color: red;
+    opacity: 0;
+    transition: all linear .2s;
+    &.invalid {
+       opacity: 1;
+    }
+ }
+ .styles{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+ }
+ @media screen and (max-width:40em) {
+    .products--grid{
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       column-gap: 10px;
+    }
+ }
+ @media screen and (min-width:40em) {
+    .products--grid{
+       display: grid;
+       grid-template-columns: repeat(5,1fr);
+       column-gap: 15px;
+    }
+ }
